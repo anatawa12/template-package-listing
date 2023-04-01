@@ -34,8 +34,9 @@ jobs:
       - uses: actions/checkout@v3 # check out this repo
       - uses: actions/checkout@v3 # check out automation repo
         with:
-          repository: vrchat-community/package-list-action
+          repository: anatawa12/package-list-action
           path: ${{env.pathToCi}}
+          ref: vpm-resolver-bug-workaround
           clean: false # otherwise the local repo will no longer be checked out
           
       - name: Restore Cache
